@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: qingzhangpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: qingzhangpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: qingzhangpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: qingzhangpipelinesjavascriptdocker 
+          image: mycontainerregist8305.azurecr.io/qingzhangpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
